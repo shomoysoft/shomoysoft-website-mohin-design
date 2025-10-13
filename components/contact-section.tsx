@@ -54,7 +54,7 @@ export function ContactSection() {
           </div>
 
           {/* Bottom Section - Form Left, Image Right */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
             {/* Left - Contact Form */}
             <div>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -121,7 +121,7 @@ export function ContactSection() {
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full md:w-auto px-12">
+                <Button type="submit" size="lg" className="w-full px-12">
                   Send Message Now
                 </Button>
               </form>
@@ -130,7 +130,7 @@ export function ContactSection() {
             {/* Right - Image */}
             <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
               <Image
-                src="/business-team-meeting-collaboration.jpg"
+                src="/get-in-touch.jpg"
                 alt="Professional business team collaborating in a meeting"
                 fill
                 className="object-cover"
