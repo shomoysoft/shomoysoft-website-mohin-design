@@ -2,7 +2,10 @@ import { Button } from "@/components/ui/button"
 
 export function CtaBanner() {
   return (
-    <section className="py-16 px-4 md:px-6 lg:px-8 bg-primary relative overflow-hidden">
+    <section className="py-16 px-4 md:px-6 lg:px-8 relative overflow-hidden">
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url(/bacground.jpg)" }} />
+      <div className="absolute inset-0 bg-[#0B6EF3] opacity-90" />
+
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-20 w-16 h-16 border-2 border-white rotate-45" />
