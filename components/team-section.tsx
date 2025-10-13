@@ -1,11 +1,11 @@
 import Image from "next/image"
-import { Facebook, Linkedin, Globe } from "lucide-react"
 import Link from "next/link"
 
 const teamMembers = [
   {
     id: 1,
     name: "Jubaier Val",
+    slug: "jubaer-hossain",
     title: "Software Engineer | 10 Years Experience",
     image: "/team-member-1.jpg",
     bgColor: "bg-cyan-100",
@@ -13,6 +13,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Jubaier Val er Bou",
+    slug: "tamanna-tanni",
     title: "Software Engineer | 10 Years Experience",
     image: "/team-member-2.jpg",
     bgColor: "bg-slate-200",
@@ -20,6 +21,7 @@ const teamMembers = [
   {
     id: 3,
     name: "Jubaier Val er Bou 2",
+    slug: "sarah-ahmed",
     title: "Software Engineer | 10 Years Experience",
     image: "/team-member-3.jpg",
     bgColor: "bg-gray-100",
@@ -27,6 +29,7 @@ const teamMembers = [
   {
     id: 4,
     name: "Jubaier Val er Dosto",
+    slug: "michael-rahman",
     title: "Software Engineer | 10 Years Experience",
     image: "/team-member-4.jpg",
     bgColor: "bg-rose-100",
@@ -56,9 +59,10 @@ export function TeamSection() {
         {/* Team Member Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {teamMembers.map((member) => (
-            <div
+            <Link
               key={member.id}
-              className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              href={`/teams/${member.slug}`}
+              className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 block"
             >
               <div className={`relative h-64 ${member.bgColor}`}>
                 <Image
@@ -70,29 +74,9 @@ export function TeamSection() {
               </div>
               <div className="p-6 text-center">
                 <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{member.title}</p>
-                <div className="flex justify-center gap-3">
-                  <Link
-                    href="#"
-                    className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
-                  >
-                    <Facebook className="h-4 w-4" />
-                  </Link>
-                  <Link
-                    href="#"
-                    className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
-                  >
-                    <Linkedin className="h-4 w-4" />
-                  </Link>
-                  <Link
-                    href="#"
-                    className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
-                  >
-                    <Globe className="h-4 w-4" />
-                  </Link>
-                </div>
+                <p className="text-sm text-muted-foreground">{member.title}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
