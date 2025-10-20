@@ -8,18 +8,18 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link href="/" className="flex items-center gap-2">
             <span className="text-xl lg:text-2xl font-bold text-foreground">
-              Somay<span className="text-primary">SOFT</span>
+              Shomoy<span className="text-primary">SOFT</span>
             </span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link href="#home" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+            <Link href="/" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
               Home
             </Link>
             <Link href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               About us
             </Link>
-            <Link href="#services" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <Link href="/services" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Services
             </Link>
             <Link href="#teams" className="text-sm font-medium text-foreground hover:text-primary transition-colors">

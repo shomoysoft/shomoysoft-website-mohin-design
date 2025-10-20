@@ -1,7 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
+import { teamMembers } from "@/data/teamMembers"
 
-const teamMembers = [
+const others = [
   {
     id: 1,
     name: "Jubaier Val",
@@ -24,7 +25,6 @@ const teamMembers = [
     slug: "sarah-ahmed",
     title: "Software Engineer | 10 Years Experience",
     image: "/team-member-3.jpg",
-    bgColor: "bg-gray-100",
   },
   {
     id: 4,
@@ -32,7 +32,6 @@ const teamMembers = [
     slug: "michael-rahman",
     title: "Software Engineer | 10 Years Experience",
     image: "/team-member-4.jpg",
-    bgColor: "bg-rose-100",
   },
 ]
 
@@ -50,8 +49,7 @@ export function TeamSection() {
           </div>
           <div className="max-w-md">
             <p className="text-muted-foreground">
-              Lorem ipsum dolor sit amet consectetur. Sed vel posuere commodo odio amet. Aliquam lacus denim nibh
-              tellis. Euismod faucis dictumst eros in. Ac cursus semper sit vel mauris vecu ut quis. Scelerisque dictum.
+             Our diverse team of experts brings together years of experience in software development, AI, design, and project management.
             </p>
           </div>
         </div>
@@ -61,7 +59,7 @@ export function TeamSection() {
           {teamMembers.map((member) => (
             <Link
               key={member.id}
-              href={`/teams/${member.slug}`}
+              href={`/teams/${member.id}`}
               className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 block"
             >
               <div className={`relative h-64 ${member.bgColor}`}>
@@ -74,7 +72,8 @@ export function TeamSection() {
               </div>
               <div className="p-6 text-center">
                 <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
-                <p className="text-sm text-muted-foreground">{member.title}</p>
+                <p className="text-sm text-foreground mb-2">{member.role}</p>
+                <p className="text-sm text-muted-foreground">{member.description}</p>
               </div>
             </Link>
           ))}

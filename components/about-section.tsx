@@ -32,7 +32,6 @@ export function AboutSection() {
 
               {/* Decorative elements */}
               <div className="absolute -right-8 top-1/2 -translate-y-1/2 w-32 h-32 bg-primary rounded-full opacity-20" />
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 border-4 border-primary rounded-full" />
               <div className="absolute top-8 -right-12 text-primary text-2xl">✦</div>
 
               {/* 99% Badge */}
@@ -81,10 +80,7 @@ export function AboutSection() {
 
             {/* Content */}
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Lorem ipsum dolor sit amet consectetur. Consequat feugiat leo facilisis bibendum vitae sagittis ultrices.
-              Fermentum nunc tincidunt ut duis mattis molestie enim. Viverra tristique metus venenatis nisi et integer
-              blandit. Pellentesque aliquam fermentum odio estu. Enim mi et convallis eros non finglilla pellentesque
-              elit.
+              We are a forward-thinking software company dedicated to delivering innovative AI and software solutions that empower businesses to thrive in the digital age.
             </p>
 
             {/* Features Grid */}

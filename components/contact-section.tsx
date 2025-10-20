@@ -46,9 +46,7 @@ export function ContactSection() {
             {/* Right - Description Text */}
             <div className="flex items-center">
               <p className="text-muted-foreground leading-relaxed text-base">
-                Lorem ipsum dolor sit amet consectetur. Sed vel posuere commodo odio velit. Aliquam lacus libero nibh
-                tellus. Euismod faucis dictumst vitae in. Ac cursus semper sit vel mauris velit ut alis. Scelerisque
-                dictum quis tellus molestie amet quis facilisis ut.
+                Ready to start your next project? Get in touch with us today.
               </p>
             </div>
           </div>

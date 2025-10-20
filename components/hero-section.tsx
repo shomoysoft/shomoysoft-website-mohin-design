@@ -1,8 +1,12 @@
-import { Button } from "@/components/ui/button"
-import { Play } from "lucide-react"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button";
+import { Play } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { teamMembers } from "@/data/teamMembers";
 
-export function HeroSection() {
+export function HeroSection({ visibleCount = 3 }) {
+  const visibleMembers = teamMembers.slice(0, visibleCount);
+  const extraCount = teamMembers.length - visibleCount;
+
   return (
     <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
       {/* Decorative elements */}
@@ -15,13 +19,15 @@ export function HeroSection() {
           {/* Left content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <p className="text-sm font-medium text-muted-foreground">Welcome to Somay Soft</p>
+              <p className="text-sm font-medium text-muted-foreground">
+                Welcome to Somay Soft
+              </p>
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-balance">
-                Your Brand&apos;s Challenge. Our Smartest <span className="text-primary">Solutions.</span>
+                Your Brand&apos;s Challenge. Our Smartest{" "}
+                <span className="text-primary">Solutions.</span>
               </h1>
               <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl">
-                Lorem ipsum dolor sit amet consectetur. Quis massa euismod tellus gravida id congue at nisi nam. Egestas
-                id pretium mauris nulla.
+                We specialize in cutting-edge AI development and custom software solutions that transform businesses and drive innovation forward.
               </p>
             </div>
 
@@ -41,33 +47,50 @@ export function HeroSection() {
           {/* Right content - Team image */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img src="/professional-team-collaborating-at-modern-office-d.jpg" alt="Professional team collaboration" className="w-full h-auto" />
+              <img
+                src="/professional-team-collaborating-at-modern-office-d.jpg"
+                alt="Professional team collaboration"
+                className="w-full h-auto"
+              />
 
               {/* Experience badge */}
               <div className="absolute top-6 right-6 bg-background rounded-xl shadow-lg p-4 text-center min-w-[120px]">
                 <div className="text-3xl font-bold text-primary">10+</div>
-                <div className="text-xs text-muted-foreground mt-1">Years Experience</div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  Years Experience
+                </div>
               </div>
 
               {/* Our Experts avatars */}
               <div className="absolute bottom-6 left-6 bg-background rounded-xl shadow-lg p-4">
-                <p className="text-xs font-medium text-muted-foreground mb-3">Our Experts</p>
+                <p className="text-xs font-medium text-muted-foreground mb-3">
+                  Our Experts
+                </p>
                 <div className="flex -space-x-2">
-                  <Avatar className="w-10 h-10 border-2 border-background">
-                    <AvatarImage src="/professional-woman-diverse.png" />
-                    <AvatarFallback>JD</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="w-10 h-10 border-2 border-background">
-                    <AvatarImage src="/professional-man.jpg" />
-                    <AvatarFallback>SM</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="w-10 h-10 border-2 border-background">
-                    <AvatarImage src="/professional-person.png" />
-                    <AvatarFallback>AK</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="w-10 h-10 border-2 border-background bg-primary">
-                    <AvatarFallback className="text-primary-foreground text-xs">+5</AvatarFallback>
-                  </Avatar>
+                  {visibleMembers.map((member) => (
+                    <Avatar
+                      key={member.id}
+                      className={`w-10 h-10 border-2 border-background ${
+                        member.bgColor || ""
+                      }`}
+                    >
+                      {member.image ? (
+                        <AvatarImage src={member.image} />
+                      ) : (
+                        <AvatarFallback>
+                          {member.name.slice(0, 2)}
+                        </AvatarFallback>
+                      )}
+                    </Avatar>
+                  ))}
+
+                  {extraCount > 0 && (
+                    <Avatar className="w-10 h-10 border-2 border-background bg-primary">
+                      <AvatarFallback className="text-primary-foreground text-xs">
+                        +{extraCount}
+                      </AvatarFallback>
+                    </Avatar>
+                  )}
                 </div>
               </div>
             </div>
@@ -75,5 +98,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
