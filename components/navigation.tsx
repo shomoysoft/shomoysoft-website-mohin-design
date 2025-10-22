@@ -16,7 +16,7 @@ export function Navigation() {
             <Link href="/" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
               Home
             </Link>
-            <Link href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <Link href="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               About us
             </Link>
             <Link href="/services" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
