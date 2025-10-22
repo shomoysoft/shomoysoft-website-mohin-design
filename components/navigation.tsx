@@ -22,11 +22,11 @@ export function Navigation() {
             <Link href="/services" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Services
             </Link>
-            <Link href="#teams" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <Link href="/teams" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Teams
             </Link>
             <Link
-              href="#portfolio"
+              href="/portfolio"
               className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               Portfolio
@@ -41,3 +41,5 @@ export function Navigation() {
     </nav>
   )
 }
+
+export default Navigation
