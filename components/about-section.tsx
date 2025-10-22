@@ -80,7 +80,8 @@ export function AboutSection() {
 
             {/* Content */}
             <p className="text-muted-foreground leading-relaxed mb-6">
-              We are a forward-thinking software company dedicated to delivering innovative AI and software solutions that empower businesses to thrive in the digital age.
+              We are a forward-thinking software company dedicated to delivering innovative AI and software solutions
+              that empower businesses to thrive in the digital age.
             </p>
 
             {/* Features Grid */}
@@ -99,7 +100,7 @@ export function AboutSection() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-sm font-medium">24/7 Hours' Support</span>
+                <span className="text-sm font-medium">24/7 Hours&apos; Support</span>
               </div>
             </div>
           </div>

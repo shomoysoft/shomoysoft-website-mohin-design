@@ -2,39 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { teamMembers } from "@/data/teamMembers"
 
-const others = [
-  {
-    id: 1,
-    name: "Jubaier Val",
-    slug: "jubaer-hossain",
-    title: "Software Engineer | 10 Years Experience",
-    image: "/team-member-1.jpg",
-    bgColor: "bg-cyan-100",
-  },
-  {
-    id: 2,
-    name: "Jubaier Val er Bou",
-    slug: "tamanna-tanni",
-    title: "Software Engineer | 10 Years Experience",
-    image: "/team-member-2.jpg",
-    bgColor: "bg-slate-200",
-  },
-  {
-    id: 3,
-    name: "Jubaier Val er Bou 2",
-    slug: "sarah-ahmed",
-    title: "Software Engineer | 10 Years Experience",
-    image: "/team-member-3.jpg",
-  },
-  {
-    id: 4,
-    name: "Jubaier Val er Dosto",
-    slug: "michael-rahman",
-    title: "Software Engineer | 10 Years Experience",
-    image: "/team-member-4.jpg",
-  },
-]
-
 export function TeamSection() {
   return (
     <section className="py-20 px-4 md:px-6 lg:px-8 bg-background">
@@ -49,7 +16,8 @@ export function TeamSection() {
           </div>
           <div className="max-w-md">
             <p className="text-muted-foreground">
-             Our diverse team of experts brings together years of experience in software development, AI, design, and project management.
+              Our diverse team of experts brings together years of experience in software development, AI, design, and
+              project management.
             </p>
           </div>
         </div>

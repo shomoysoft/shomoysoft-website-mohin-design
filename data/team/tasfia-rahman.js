@@ -47,12 +47,7 @@ const tasfia = {
         "Outcome Tracking Dashboard",
         "Team Collaboration Tools",
       ],
-      targetUsers: [
-        "Job Seekers",
-        "Career Coaches",
-        "Organizations",
-        "Bootcamps",
-      ],
+      targetUsers: ["Job Seekers", "Career Coaches", "Organizations", "Bootcamps"],
       designProcess: [
         "User research and persona development",
         "Information architecture and user flows",
@@ -60,8 +55,7 @@ const tasfia = {
         "High-fidelity UI design with 12-column grid system",
         "Interactive prototyping and user testing",
       ],
-      impact:
-        "Streamlined job application process with collaborative feedback system for improved success rates",
+      impact: "Streamlined job application process with collaborative feedback system for improved success rates",
     },
     {
       title: "Eco-Friendly Product Web App",
@@ -96,8 +90,7 @@ const tasfia = {
         "High-fidelity page designs",
         "Interactive Figma prototypes",
       ],
-      impact:
-        "Enhanced eco-conscious shopping experience with intuitive navigation and sustainable branding",
+      impact: "Enhanced eco-conscious shopping experience with intuitive navigation and sustainable branding",
     },
     {
       title: "Event Management Mobile App",
@@ -117,12 +110,7 @@ const tasfia = {
         "Push Notifications",
         "Social Sharing Features",
       ],
-      categories: [
-        "Music Events",
-        "Tech Conferences",
-        "Business Meetups",
-        "Social Gatherings",
-      ],
+      categories: ["Music Events", "Tech Conferences", "Business Meetups", "Social Gatherings"],
       designProcess: [
         "User needs research and flow design",
         "Wireframing for mobile interactions",
@@ -130,8 +118,7 @@ const tasfia = {
         "Interactive prototype development",
         "Accessibility and responsiveness testing",
       ],
-      impact:
-        "Simplified event discovery and management with engaging mobile-first experience",
+      impact: "Simplified event discovery and management with engaging mobile-first experience",
     },
   ],
   designPhilosophy: [
@@ -166,14 +153,7 @@ const tasfia = {
         "Conducting user research and usability testing to refine design decisions",
         "Maintaining design consistency through reusable components and design systems",
       ],
-      technologies: [
-        "Figma",
-        "UI Design",
-        "UX Design",
-        "Prototyping",
-        "User Research",
-        "Usability Testing",
-      ],
+      technologies: ["Figma", "UI Design", "UX Design", "Prototyping", "User Research", "Usability Testing"],
     },
     {
       title: "UI/UX Designer Intern",
@@ -186,15 +166,7 @@ const tasfia = {
         "Transformed business requirements into user-friendly and aesthetically pleasing UI designs",
         "Collaborated closely with developers to ensure smooth implementation of design elements",
       ],
-      technologies: [
-        "Figma",
-        "Wireframing",
-        "Prototyping",
-        "Design System",
-        "User Flow",
-        "UI Design",
-        "UX Research",
-      ],
+      technologies: ["Figma", "Wireframing", "Prototyping", "Design System", "User Flow", "UI Design", "UX Research"],
     },
     {
       title: "UI/UX Designer Intern",
@@ -207,14 +179,7 @@ const tasfia = {
         "Designed and presented interactive prototypes to stakeholders for feedback and iteration",
         "Contributed to the design documentation and collaborated remotely with developers",
       ],
-      technologies: [
-        "Figma",
-        "UX Research",
-        "Prototyping",
-        "Wireframing",
-        "Responsive Design",
-        "Collaboration Tools",
-      ],
+      technologies: ["Figma", "UX Research", "Prototyping", "Wireframing", "Responsive Design", "Collaboration Tools"],
     },
   ],
   education: [
@@ -224,8 +189,8 @@ const tasfia = {
       department: "Department of Computer Science and Engineering",
       period: "January 2020 - June 2024",
       location: "Dhaka, Bangladesh",
-    }
+    },
   ],
-};
+}
 
-export default tasfia;
+export default tasfia

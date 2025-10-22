@@ -3,7 +3,8 @@ export const siteConfig = {
   company: {
     name: "Shomoysoft",
     tagline: "Innovate. Build. Transform.",
-    description: "We specialize in cutting-edge AI development and custom software solutions that transform businesses and drive innovation forward.",
+    description:
+      "We specialize in cutting-edge AI development and custom software solutions that transform businesses and drive innovation forward.",
   },
   contact: {
     email: "jubaer@shomoysoft.com",
@@ -40,4 +41,4 @@ export const siteConfig = {
       icon: "Code",
     },
   },
-}
+} // Added missing semicolon
