@@ -17,7 +17,7 @@ import {
   Clock,
   HeartHandshake,
 } from "lucide-react"
-import LoaderLink from "@/components/LoaderLink"
+import Link from "next/link"
 
 export default function AboutPage() {
   return (
@@ -27,12 +27,12 @@ export default function AboutPage() {
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-primary/10 via-background to-primary/5 pt-32 pb-20 px-4">
           <div className="container mx-auto max-w-7xl">
-            <LoaderLink href="/">
-              <Button variant="ghost" className="mb-8 -ml-4">
+            <Button variant="ghost" className="mb-8 -ml-4" asChild>
+              <Link href="/">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Back to Home
-              </Button>
-            </LoaderLink>
+              </Link>
+            </Button>
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -45,16 +45,12 @@ export default function AboutPage() {
                   solutions that empower businesses to thrive in the digital age.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <LoaderLink href="#contact">
-                    <Button size="lg" className="rounded-full">
-                      Get in Touch
-                    </Button>
-                  </LoaderLink>
-                  <LoaderLink href="/services">
-                    <Button size="lg" variant="outline" className="rounded-full bg-transparent">
-                      Our Services
-                    </Button>
-                  </LoaderLink>
+                  <Button size="lg" className="rounded-full" asChild>
+                    <Link href="#contact">Get in Touch</Link>
+                  </Button>
+                  <Button size="lg" variant="outline" className="rounded-full bg-transparent" asChild>
+                    <Link href="/services">Our Services</Link>
+                  </Button>
                 </div>
               </div>
 
@@ -299,20 +295,17 @@ export default function AboutPage() {
               Let's discuss how our innovative solutions can help you achieve your goals and drive growth.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <LoaderLink href="#contact">
-                <Button size="lg" variant="secondary" className="rounded-full">
-                  Contact Us Today
-                </Button>
-              </LoaderLink>
-              <LoaderLink href="/services">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="rounded-full bg-transparent text-white border-white hover:bg-white/10"
-                >
-                  Explore Services
-                </Button>
-              </LoaderLink>
+              <Button size="lg" variant="secondary" className="rounded-full" asChild>
+                <Link href="#contact">Contact Us Today</Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full bg-transparent text-white border-white hover:bg-white/10"
+                asChild
+              >
+                <Link href="/services">Explore Services</Link>
+              </Button>
             </div>
           </div>
         </section>
