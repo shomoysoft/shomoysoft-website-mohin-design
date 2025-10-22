@@ -1,51 +1,94 @@
 "use client"
 
+import type React from "react"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button as AntButton, Modal, Form, Input } from "antd"
-import { ArrowLeft, ArrowRight, Check } from "lucide-react"
+import { ArrowLeft, ArrowRight, Check, X } from "lucide-react"
 import { softwareServices, aiServices } from "@/data/services"
 import LoaderLink from "@/components/LoaderLink"
 import { useState } from "react"
-import { showToast } from "@/lib/toast"
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
 
 export default function ServicesPage() {
   const [open, setOpen] = useState(false)
   const [selectedService, setSelectedService] = useState("")
   const [loading, setLoading] = useState(false)
-  const [form] = Form.useForm()
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
 
   const handleRequestService = (serviceTitle: string) => {
     setSelectedService(serviceTitle)
     setOpen(true)
   }
 
-  const handleSendRequest = async (values: any) => {
+  const validateForm = () => {
+    const newErrors = {
+      name: "",
+      email: "",
+      message: "",
+    }
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Please enter your name"
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Please enter your email"
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Enter a valid email"
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Please enter your project details"
+    }
+
+    setErrors(newErrors)
+    return !newErrors.name && !newErrors.email && !newErrors.message
+  }
+
+  const handleSendRequest = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (!validateForm()) {
+      return
+    }
+
     setLoading(true)
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          ...values,
-          message: `Service Requested: ${selectedService}\n\n${values.message}`,
+          ...formData,
+          message: `Service Requested: ${selectedService}\n\n${formData.message}`,
         }),
       })
 
       const data = await res.json()
 
       if (res.ok) {
-        showToast("success", "Message sent successfully")
-        form.resetFields()
+        alert("✅ Message sent successfully")
+        setFormData({ name: "", email: "", message: "" })
         setOpen(false)
       } else {
-        showToast("error", data.message || "Something went wrong")
+        alert(`❌ ${data.message || "Something went wrong"}`)
       }
     } catch (err) {
       console.error(err)
-      showToast("error", "Failed to send message")
+      alert("❌ Failed to send message")
     } finally {
       setLoading(false)
     }
@@ -222,69 +265,78 @@ export default function ServicesPage() {
         <Footer />
 
         {/* Request Service Modal */}
-        <Modal
-          title={
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900">Request a Quote</h2>
-              <p className="text-gray-500 text-sm mt-1">
-                Fill out the form below, and our team will get back to you shortly.
-              </p>
+        {open && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+            <div className="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-6">
+                  <div>
+                    <h2 className="text-2xl font-bold text-gray-900">Request a Quote</h2>
+                    <p className="text-gray-500 text-sm mt-1">
+                      Fill out the form below, and our team will get back to you shortly.
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setOpen(false)}
+                    className="text-gray-400 hover:text-gray-600 transition-colors"
+                  >
+                    <X className="h-5 w-5" />
+                  </button>
+                </div>
+
+                <form onSubmit={handleSendRequest} className="space-y-4">
+                  <div>
+                    <Label htmlFor="name" className="font-semibold">
+                      Your Name
+                    </Label>
+                    <Input
+                      id="name"
+                      placeholder="Enter your full name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="mt-1"
+                    />
+                    {errors.name && <p className="text-sm text-red-500 mt-1">{errors.name}</p>}
+                  </div>
+
+                  <div>
+                    <Label htmlFor="email" className="font-semibold">
+                      Your Email
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="Enter your email address"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="mt-1"
+                    />
+                    {errors.email && <p className="text-sm text-red-500 mt-1">{errors.email}</p>}
+                  </div>
+
+                  <div>
+                    <Label htmlFor="message" className="font-semibold">
+                      Project Details
+                    </Label>
+                    <Textarea
+                      id="message"
+                      placeholder="Tell us about your project..."
+                      rows={6}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="mt-1"
+                    />
+                    {errors.message && <p className="text-sm text-red-500 mt-1">{errors.message}</p>}
+                  </div>
+
+                  <Button type="submit" disabled={loading} className="w-full">
+                    {loading ? "Sending..." : "Send Request"}
+                  </Button>
+                </form>
+              </div>
             </div>
-          }
-          open={open}
-          onCancel={() => setOpen(false)}
-          footer={null}
-          centered
-          width={500}
-          styles={{ body: { paddingTop: 8 } }}
-        >
-          <Form layout="vertical" form={form} onFinish={handleSendRequest}>
-            <Form.Item
-              label={<span className="font-semibold">Your Name</span>}
-              name="name"
-              rules={[{ required: true, message: "Please enter your name" }]}
-            >
-              <Input placeholder="Enter your full name" size="large" className="rounded-lg" />
-            </Form.Item>
-
-            <Form.Item
-              label={<span className="font-semibold">Your Email</span>}
-              name="email"
-              rules={[
-                { required: true, message: "Please enter your email" },
-                { type: "email", message: "Enter a valid email" },
-              ]}
-            >
-              <Input placeholder="Enter your email address" size="large" className="rounded-lg" />
-            </Form.Item>
-
-            <Form.Item
-              label={<span className="font-semibold">Project Details</span>}
-              name="message"
-              rules={[
-                {
-                  required: true,
-                  message: "Please enter your project details",
-                },
-              ]}
-            >
-              <Input.TextArea placeholder="Tell us about your project..." rows={6} className="rounded-lg" />
-            </Form.Item>
-
-            <Form.Item>
-              <AntButton
-                type="primary"
-                htmlType="submit"
-                loading={loading}
-                block
-                size="large"
-                className="py-4 text-white font-semibold"
-              >
-                Send Request
-              </AntButton>
-            </Form.Item>
-          </Form>
-        </Modal>
+          </div>
+        )}
       </div>
     </>
   )
