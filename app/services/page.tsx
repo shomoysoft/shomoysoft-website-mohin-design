@@ -149,7 +149,7 @@ export default function ServicesPage() {
         </section>
 
         {/* AI Services */}
-        <section className="py-24 bg-gray-50">
+        <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">AI & Machine Learning Services</h2>
@@ -204,7 +204,7 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-primary text-white">
+        <section className="py-32 bg-primary text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Project?</h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
