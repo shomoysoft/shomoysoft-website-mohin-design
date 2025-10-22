@@ -51,15 +51,8 @@ export const teamMembers = [
     role: "Software Quality Assurance Engineer",
     bgColor: "bg-gray-100",
     image: "/images/team-members/tanni.jpeg?height=300&width=300",
-    description:
-      "Dedicated QA Engineer with expertise in manual and automated testing across multiple domains.",
-    skills: [
-      "Manual Testing",
-      "Test Automation",
-      "Playwright",
-      "JIRA",
-      "Performance Testing",
-    ],
+    description: "Dedicated QA Engineer with expertise in manual and automated testing across multiple domains.",
+    skills: ["Manual Testing", "Test Automation", "Playwright", "JIRA", "Performance Testing"],
   },
   {
     id: "ui-ux-designer",
@@ -67,14 +60,8 @@ export const teamMembers = [
     role: "UI/UX Designer",
     bgColor: "bg-rose-100",
     image: "/placeholder.svg?height=300&width=300",
-    description:
-      "Creative designer focused on user-centered design and exceptional user experiences.",
-    skills: [
-      "UI/UX Design",
-      "Motion Graphic Design",
-      "Video Editing",
-      "Branding",
-    ],
+    description: "Creative designer focused on user-centered design and exceptional user experiences.",
+    skills: ["UI/UX Design", "Motion Graphic Design", "Video Editing", "Branding"],
   },
   {
     id: "asgor-hossain",
@@ -84,6 +71,7 @@ export const teamMembers = [
     image: "/images/team-members/asgor.jpg?height=300&width=300",
     description:
       "AI/ML Researcher & Full Stack Developer with 1.5+ years of experience building scalable web apps using Laravel, React, and modern DevOps tools.",
+    skills: ["Python", "Laravel", "React", "Machine Learning", "Docker", "AWS", "MySQL", "DevOps"],
   },
   {
     id: "tasfia-rahman",
@@ -104,4 +92,4 @@ export const teamMembers = [
       "Responsive Design",
     ],
   },
-];
+]
