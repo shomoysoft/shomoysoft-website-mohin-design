@@ -4,7 +4,7 @@ const anam = {
   image: "/images/team-members/anam.jpg?height=400&width=400",
   bio: "SM Asif Anam is a versatile full-stack developer and AI researcher with expertise in building scalable web applications, mobile solutions, and cutting-edge AI-integrated systems. He specializes in BIM-based safety systems, travel technology platforms, and eCommerce solutions.",
   location: "Dhaka, Bangladesh",
-  experience: "6",
+  experience: "6 years",
   email: "anam@techcorp.com",
   skills: [
     { name: "AI Research", level: 92 },

@@ -4,7 +4,7 @@ const tasfia = {
   image: "/images/team-members/tasfia.png?height=400&width=400",
   bio: "Passionate UI/UX Designer with expertise in creating user-centered digital experiences. Specialized in web applications, mobile interfaces, and comprehensive design systems. Proven track record of designing intuitive interfaces that enhance user engagement and drive business results.",
   location: "Remote/Global",
-  experience: "1 years",
+  experience: "1 year",
   email: "designer@techcorp.com",
   skills: [
     { name: "Figma", level: 95 },

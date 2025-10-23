@@ -73,23 +73,23 @@ export const teamMembers = [
       "AI/ML Researcher & Full Stack Developer with 1.5+ years of experience building scalable web apps using Laravel, React, and modern DevOps tools.",
     skills: ["Python", "Laravel", "React", "Machine Learning", "Docker", "AWS", "MySQL", "DevOps"],
   },
-  {
-    id: "tasfia-rahman",
-    name: "Tasfia Rahman",
-    role: "UI/UX Designer",
-    bgColor: "bg-rose-100",
-    image: "/images/team-members/tasfia.png?height=300&width=300",
-    description:
-      "Creative UI/UX designer with experience in crafting user-centric mobile and web interfaces. Skilled in turning ideas into visually appealing and functional designs that enhance user experience.",
-    skills: [
-      "Figma",
-      "Wireframing",
-      "Prototyping",
-      "User Research",
-      "UI Design",
-      "UX Design",
-      "Design Thinking",
-      "Responsive Design",
-    ],
-  },
+  // {
+  //   id: "tasfia-rahman",
+  //   name: "Tasfia Rahman",
+  //   role: "UI/UX Designer",
+  //   bgColor: "bg-rose-100",
+  //   image: "/images/team-members/tasfia.png?height=300&width=300",
+  //   description:
+  //     "Creative UI/UX designer with experience in crafting user-centric mobile and web interfaces. Skilled in turning ideas into visually appealing and functional designs that enhance user experience.",
+  //   skills: [
+  //     "Figma",
+  //     "Wireframing",
+  //     "Prototyping",
+  //     "User Research",
+  //     "UI Design",
+  //     "UX Design",
+  //     "Design Thinking",
+  //     "Responsive Design",
+  //   ],
+  // },
 ]
