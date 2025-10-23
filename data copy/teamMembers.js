@@ -1,0 +1,101 @@
+export const teamMembers = [
+  {
+    id: "sm-asif-anam",
+    name: "SM Asif Anam",
+    role: "AI Safety Researcher, Multi-paper Author",
+    image: "/images/team-members/anam.jpg?height=300&width=300",
+    description:
+      "AI Engineer with 6+ years of experience delivering end-to-end machine learning and deep learning solutions. Expertise in natural language processing, computer vision, and deploying scalable AI models into production environments.",
+    skills: [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "NLP",
+      "Computer Vision",
+      "Deep Learning",
+      "Model Deployment",
+      "Scikit-learn",
+      "MLOps",
+      "Data Engineering",
+    ],
+  },
+  {
+    id: "md-jubaer-hossain",
+    name: "Md. Jubaer Hossain",
+    role: "Software Developer",
+    image: "/images/team-members/jubaer-hossain-SE2.jpg?height=300&width=300",
+    description:
+      "Full-stack developer with 6+ years of experience, expertise in modern web technologies and scalable architectures.",
+    skills: ["PHP", "Laravel", "JavaScript", "AWS", "Docker", "MySQL"],
+  },
+  // {
+  //   id: "abu-sufian-manager",
+  //   name: "Abu Sufian",
+  //   role: "Project Manager",
+  //   image: "/images/team-members/sufian.jpeg?height=300&width=300",
+  //   description:
+  //     "Experienced project manager ensuring smooth delivery and client satisfaction.",
+  //   skills: [
+  //     "Agile",
+  //     "Scrum",
+  //     "Risk Management",
+  //     "Client Relations",
+  //     "Team Leadership",
+  //   ],
+  // },
+  {
+    id: "tamanna-tanni",
+    name: "Tamanna Molla Tanni",
+    role: "Software Quality Assurance Engineer",
+    image: "/images/team-members/tanni.jpeg?height=300&width=300",
+    description:
+      "Dedicated QA Engineer with expertise in manual and automated testing across multiple domains.",
+    skills: [
+      "Manual Testing",
+      "Test Automation",
+      "Playwright",
+      "JIRA",
+      "Performance Testing",
+    ],
+  },
+  {
+    id: "ui-ux-designer",
+    name: "Mohin Rahman",
+    role: "UI/UX Designer",
+    image: "/placeholder.svg?height=300&width=300",
+    description:
+      "Creative designer focused on user-centered design and exceptional user experiences.",
+    skills: [
+      "UI/UX Design",
+      "Motion Graphic Design",
+      "Video Editing",
+      "Branding",
+    ],
+  },
+  {
+    id: "asgor-hossain",
+    name: "Asgor Hossain",
+    role: "AI/ML Researcher & Software Engineer",
+    image: "/images/team-members/asgor.jpg?height=300&width=300",
+    description:
+      "AI/ML Researcher & Full Stack Developer with 1.5+ years of experience building scalable web apps using Laravel, React, and modern DevOps tools.",
+  },
+  {
+    id: "tasfia-rahman",
+    name: "Tasfia Rahman",
+    role: "UI/UX Designer",
+    image: "/images/team-members/tasfia.png?height=300&width=300",
+    description:
+      "Creative UI/UX designer with experience in crafting user-centric mobile and web interfaces. Skilled in turning ideas into visually appealing and functional designs that enhance user experience.",
+    skills: [
+      "Figma",
+      "Wireframing",
+      "Prototyping",
+      "User Research",
+      "UI Design",
+      "UX Design",
+      "Design Thinking",
+      "Responsive Design",
+    ],
+  },
+];
