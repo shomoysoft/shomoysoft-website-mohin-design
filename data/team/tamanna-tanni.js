@@ -199,7 +199,7 @@ const tanni = {
       institution: "Shahjalal University of Science & Technology, Sylhet",
       department: "Department of Electrical and Electronic Engineering",
       secondMajor: "Department of Computer Science and Engineering (2nd Major)",
-      period: "2017 - 2021",
+      period: "2016 - 2021",
       location: "Sylhet, Bangladesh",
     },
   ],
