@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import Image from "next/image"
+import { showToast } from "@/lib/toast"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -19,7 +20,14 @@ export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log("[v0] Form submitted:", formData)
-    // Handle form submission here
+    showToast("success", "Message sent successfully! We'll get back to you soon.")
+
+    setFormData({
+      name: "",
+      email: "",
+      website: "",
+      message: "",
+    })
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -33,9 +41,7 @@ export function ContactSection() {
     <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
         <div className="space-y-12">
-          {/* Top Section - Header Left, Description Right */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
-            {/* Left - Large Heading */}
             <div>
               <p className="text-sm text-accent mb-3 font-medium">Get in touch</p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
@@ -43,7 +49,6 @@ export function ContactSection() {
               </h2>
             </div>
 
-            {/* Right - Description Text */}
             <div className="flex items-center">
               <p className="text-muted-foreground leading-relaxed text-base">
                 Ready to start your next project? Get in touch with us today.
@@ -51,9 +56,7 @@ export function ContactSection() {
             </div>
           </div>
 
-          {/* Bottom Section - Form Left, Image Right */}
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
-            {/* Left - Contact Form */}
             <div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -125,7 +128,6 @@ export function ContactSection() {
               </form>
             </div>
 
-            {/* Right - Image */}
             <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
               <Image
                 src="/get-in-touch.jpg"
