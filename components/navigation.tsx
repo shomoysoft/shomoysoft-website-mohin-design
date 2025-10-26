@@ -1,7 +1,20 @@
+"use client"
+
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 export function Navigation() {
+  const pathname = usePathname()
+
+  const isActive = (path: string) => {
+    if (path === "/") {
+      return pathname === "/"
+    }
+    return pathname.startsWith(path)
+  }
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 lg:px-8">
@@ -13,21 +26,48 @@ export function Navigation() {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+            <Link
+              href="/"
+              className={cn(
+                "text-sm font-medium transition-colors",
+                isActive("/") && pathname === "/" ? "text-primary" : "text-foreground hover:text-primary",
+              )}
+            >
               Home
             </Link>
-            <Link href="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <Link
+              href="/about"
+              className={cn(
+                "text-sm font-medium transition-colors",
+                isActive("/about") ? "text-primary" : "text-foreground hover:text-primary",
+              )}
+            >
               About us
             </Link>
-            <Link href="/services" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <Link
+              href="/services"
+              className={cn(
+                "text-sm font-medium transition-colors",
+                isActive("/services") ? "text-primary" : "text-foreground hover:text-primary",
+              )}
+            >
               Services
             </Link>
-            <Link href="/teams" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <Link
+              href="/teams"
+              className={cn(
+                "text-sm font-medium transition-colors",
+                isActive("/teams") ? "text-primary" : "text-foreground hover:text-primary",
+              )}
+            >
               Teams
             </Link>
             <Link
               href="/portfolio"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              className={cn(
+                "text-sm font-medium transition-colors",
+                isActive("/portfolio") ? "text-primary" : "text-foreground hover:text-primary",
+              )}
             >
               Portfolio
             </Link>
