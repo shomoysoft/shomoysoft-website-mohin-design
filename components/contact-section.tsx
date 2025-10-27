@@ -13,22 +13,36 @@ export function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    website: "",
     message: "",
   })
+  const [loading, setLoading] = useState(false); 
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("[v0] Form submitted:", formData)
-    showToast("success", "Message sent successfully! We'll get back to you soon.")
 
-    setFormData({
-      name: "",
-      email: "",
-      website: "",
-      message: "",
-    })
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true); // start loading
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        showToast("success", "Message sent successfully");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast.error(data.message || "Something went wrong");
+      }
+    } catch (err) {
+      console.error(err);
+      showToast("error", "Failed to send message");
+    } finally {
+      setLoading(false); // stop loading
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({
@@ -117,7 +131,7 @@ export function ContactSection() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={4}
+                    rows={18}
                     className="w-full resize-none"
                   />
                 </div>
