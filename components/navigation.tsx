@@ -29,7 +29,7 @@ export function Navigation() {
             <Link
               href="/"
               className={cn(
-                "text-sm font-medium transition-colors",
+                "text-base font-medium transition-colors",
                 isActive("/") && pathname === "/" ? "text-primary" : "text-foreground hover:text-primary",
               )}
             >
@@ -38,7 +38,7 @@ export function Navigation() {
             <Link
               href="/about"
               className={cn(
-                "text-sm font-medium transition-colors",
+                "text-base font-medium transition-colors",
                 isActive("/about") ? "text-primary" : "text-foreground hover:text-primary",
               )}
             >
@@ -47,7 +47,7 @@ export function Navigation() {
             <Link
               href="/services"
               className={cn(
-                "text-sm font-medium transition-colors",
+                "text-base font-medium transition-colors",
                 isActive("/services") ? "text-primary" : "text-foreground hover:text-primary",
               )}
             >
@@ -56,7 +56,7 @@ export function Navigation() {
             <Link
               href="/teams"
               className={cn(
-                "text-sm font-medium transition-colors",
+                "text-base font-medium transition-colors",
                 isActive("/teams") ? "text-primary" : "text-foreground hover:text-primary",
               )}
             >
@@ -65,7 +65,7 @@ export function Navigation() {
             <Link
               href="/portfolio"
               className={cn(
-                "text-sm font-medium transition-colors",
+                "text-base font-medium transition-colors",
                 isActive("/portfolio") ? "text-primary" : "text-foreground hover:text-primary",
               )}
             >
@@ -74,7 +74,7 @@ export function Navigation() {
           </div>
 
           <Button variant="outline" className="text-sm font-medium bg-transparent" asChild>
-            <Link href="#contact">Contact us</Link>
+            <Link href="/contact">Contact us</Link>
           </Button>
         </div>
       </div>
