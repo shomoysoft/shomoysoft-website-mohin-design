@@ -41,4 +41,4 @@ export const siteConfig = {
       icon: "Code",
     },
   },
-} // Added missing semicolon
+}

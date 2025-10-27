@@ -30,21 +30,6 @@ export const teamMembers = [
       "Full-stack developer with 6+ years of experience, expertise in modern web technologies and scalable architectures.",
     skills: ["PHP", "Laravel", "JavaScript", "AWS", "Docker", "MySQL"],
   },
-  // {
-  //   id: "abu-sufian-manager",
-  //   name: "Abu Sufian",
-  //   role: "Project Manager",
-  //   image: "/images/team-members/sufian.jpeg?height=300&width=300",
-  //   description:
-  //     "Experienced project manager ensuring smooth delivery and client satisfaction.",
-  //   skills: [
-  //     "Agile",
-  //     "Scrum",
-  //     "Risk Management",
-  //     "Client Relations",
-  //     "Team Leadership",
-  //   ],
-  // },
   {
     id: "tamanna-tanni",
     name: "Tamanna Molla Tanni",
