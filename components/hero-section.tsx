@@ -21,7 +21,7 @@ export function HeroSection({ visibleCount = 3 }) {
             <div className="space-y-6">
               <p className="text-sm font-medium text-muted-foreground">Welcome to ShomoySoft</p>
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-balance">
-                Your Brand&apos;s Challenge. Our Smartest <span className="text-primary">Solutions.</span>
+                Your Brand's Challenge. Our Smartest <span className="text-primary">Solutions.</span>
               </h1>
               <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl">
                 We specialize in cutting-edge AI development and custom software solutions that transform businesses and

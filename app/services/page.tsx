@@ -251,7 +251,7 @@ export default function ServicesPage() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Project?</h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how our services can help transform your business and achieve your goals.
+              Let's discuss how our services can help transform your business and achieve your goals.
             </p>
             <LoaderLink href="/#contact">
               <Button size="lg" variant="secondary" className="text-lg px-8">
