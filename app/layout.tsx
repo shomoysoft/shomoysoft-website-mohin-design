@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`min-h-screen relative font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <PageLoaderProvider>
-          <PageLoader />
+          {/* <PageLoader /> */}
           <PageTransitionWrapper>{children}</PageTransitionWrapper>
 
           <Toaster

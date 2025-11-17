@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input"
 import { Facebook, Twitter, Linkedin, Github, Mail, Phone, MapPin, Code } from "lucide-react"
 import Link from "next/link"
 import { siteConfig } from "@/config/site"
+import LoaderLink from "./LoaderLink"
 
 export function Footer() {
   return (
@@ -41,24 +42,24 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                <LoaderLink href="/about" className="text-gray-300 hover:text-white transition-colors">
                   About Us
-                </Link>
+                </LoaderLink>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
+                <LoaderLink href="/services" className="text-gray-300 hover:text-white transition-colors">
                   Services
-                </Link>
+                </LoaderLink>
               </li>
               <li>
-                <Link href="#team" className="text-gray-300 hover:text-white transition-colors">
+                <LoaderLink href="teams" className="text-gray-300 hover:text-white transition-colors">
                   Team
-                </Link>
+                </LoaderLink>
               </li>
               <li>
-                <Link href="#contact" className="text-gray-300 hover:text-white transition-colors">
+                <LoaderLink href="contact" className="text-gray-300 hover:text-white transition-colors">
                   Contact
-                </Link>
+                </LoaderLink>
               </li>
             </ul>
           </div>
