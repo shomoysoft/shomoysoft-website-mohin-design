@@ -1,9 +1,9 @@
 "use client"
 
-import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import LoaderLink from "./LoaderLink"
 
 export function Navigation() {
   const pathname = usePathname()
@@ -19,14 +19,14 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex items-center gap-2">
+          <LoaderLink href="/" className="flex items-center gap-2">
             <span className="text-xl lg:text-2xl font-bold text-foreground">
               Shomoy<span className="text-primary">SOFT</span>
             </span>
-          </Link>
+          </LoaderLink>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link
+            <LoaderLink
               href="/"
               className={cn(
                 "text-base font-medium transition-colors",
@@ -34,8 +34,8 @@ export function Navigation() {
               )}
             >
               Home
-            </Link>
-            <Link
+            </LoaderLink>
+            <LoaderLink
               href="/about"
               className={cn(
                 "text-base font-medium transition-colors",
@@ -43,8 +43,8 @@ export function Navigation() {
               )}
             >
               About us
-            </Link>
-            <Link
+            </LoaderLink>
+            <LoaderLink
               href="/services"
               className={cn(
                 "text-base font-medium transition-colors",
@@ -52,8 +52,8 @@ export function Navigation() {
               )}
             >
               Services
-            </Link>
-            <Link
+            </LoaderLink>
+            <LoaderLink
               href="/teams"
               className={cn(
                 "text-base font-medium transition-colors",
@@ -61,8 +61,8 @@ export function Navigation() {
               )}
             >
               Teams
-            </Link>
-            <Link
+            </LoaderLink>
+            <LoaderLink
               href="/portfolio"
               className={cn(
                 "text-base font-medium transition-colors",
@@ -70,11 +70,11 @@ export function Navigation() {
               )}
             >
               Portfolio
-            </Link>
+            </LoaderLink>
           </div>
 
           <Button variant="outline" className="text-sm font-medium bg-transparent" asChild>
-            <Link href="/contact">Contact us</Link>
+            <LoaderLink href="/contact">Contact us</LoaderLink>
           </Button>
         </div>
       </div>

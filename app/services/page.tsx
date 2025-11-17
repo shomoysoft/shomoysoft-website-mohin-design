@@ -253,7 +253,7 @@ export default function ServicesPage() {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Let's discuss how our services can help transform your business and achieve your goals.
             </p>
-            <LoaderLink href="/#contact">
+            <LoaderLink href="/contact">
               <Button size="lg" variant="secondary" className="text-lg px-8">
                 Get in Touch
                 <ArrowRight className="ml-2 h-5 w-5" />
