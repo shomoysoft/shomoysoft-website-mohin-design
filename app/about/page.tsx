@@ -27,13 +27,6 @@ export default function AboutPage() {
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-primary/10 via-background to-primary/5 pt-32 pb-20 px-4">
           <div className="container mx-auto max-w-7xl">
-            <Button variant="ghost" className="mb-8 -ml-4" asChild>
-              <Link href="/">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Home
-              </Link>
-            </Button>
-
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-primary font-semibold mb-4">About ShomoySoft</p>
@@ -46,7 +39,7 @@ export default function AboutPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" className="rounded-full" asChild>
-                    <Link href="#contact">Get in Touch</Link>
+                    <Link href="/contact">Get in Touch</Link>
                   </Button>
                   <Button size="lg" variant="outline" className="rounded-full bg-transparent" asChild>
                     <Link href="/services">Our Services</Link>
@@ -296,7 +289,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" variant="secondary" className="rounded-full" asChild>
-                <Link href="#contact">Contact Us Today</Link>
+                <Link href="/contact">Contact Us Today</Link>
               </Button>
               <Button
                 size="lg"

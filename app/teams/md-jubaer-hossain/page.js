@@ -1,11 +1,9 @@
 "use client";
 
-import LoaderLink from "@/components/LoaderLink";
 import member from "@/data/team/jubaer-hossain";
 import { Badge } from "@/components/ui/badge";
 import { Button, Row, Col, Typography, Tag, Avatar } from "antd";
 import {
-  ArrowLeft,
   Mail,
   Linkedin,
   Award,
@@ -22,6 +20,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
+import Navigation from "@/components/navigation";
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -37,18 +36,7 @@ export default function JubaerPortfolioPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center h-16">
-            <LoaderLink href="/">
-              <Button type="text" icon={<ArrowLeft className="h-4 w-4" />}>
-                Back to Home
-              </Button>
-            </LoaderLink>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Profile Header */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">

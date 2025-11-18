@@ -6,14 +6,14 @@ export const siteConfig = {
   },
   contact: {
     address: {
-      fulladdress: "123 Tech Street, San Francisco, CA 94105",
-      street: "123 Tech Street",
-      city: "San Francisco",
-      state: "CA",
-      zip: "94105",
-      country: "USA",
+      fulladdress: "Purana Paltan, Dhaka 1000, Bangladesh",
+      street: "",
+      city: "Purana Paltan",
+      state: "Dhaka",
+      zip: "1000",
+      country: "Bangladesh",
     },
-    phone: "+1 (555) 123-4567",
+    phone: "+8801754633041",
     email: "info@shomoysoft.com",
   },
   legal: {

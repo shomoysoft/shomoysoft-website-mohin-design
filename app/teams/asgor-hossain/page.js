@@ -1,11 +1,10 @@
 "use client";
 
-import LoaderLink from "@/components/LoaderLink";
 import member from "@/data/team/asgor-hossain";
 import { Badge } from "@/components/ui/badge";
+import Navigation from "@/components/navigation";
 import { Button, Row, Col, Typography, Tag, Avatar } from "antd";
 import {
-  ArrowLeft,
   Award,
   Calendar,
   MapPin,
@@ -37,19 +36,7 @@ export default function AsgorPortfolioPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center h-16">
-            <LoaderLink href="/">
-              <Button type="text" icon={<ArrowLeft className="h-4 w-4" />}>
-                Back to Home
-              </Button>
-            </LoaderLink>
-          </div>
-        </div>
-      </nav>
-
+      <Navigation />
       {/* Profile Header */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
         <div className="container mx-auto px-4">
