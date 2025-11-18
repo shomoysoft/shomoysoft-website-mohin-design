@@ -5,6 +5,7 @@ import { ServicesSection } from "@/components/services-section"
 import { PortfolioSection } from "@/components/portfolio-section"
 import { CtaBanner } from "@/components/cta-banner"
 import { TeamSection } from "@/components/team-section"
+import { BusinessConsultantsSection } from "@/components/business-consultants-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
@@ -18,6 +19,7 @@ export default function HomePage() {
       <PortfolioSection />
       <CtaBanner />
       <TeamSection />
+      <BusinessConsultantsSection />
       <ContactSection />
       <Footer />
     </main>

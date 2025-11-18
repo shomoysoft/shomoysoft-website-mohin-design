@@ -91,7 +91,7 @@ export default function PortfolioPage() {
               Explore Our <span className="text-primary">Portfolio</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-              Discover the innovative solutions we&apos;ve built for clients across various industries. Each project
+              Discover the innovative solutions we've built for clients across various industries. Each project
               showcases our commitment to excellence and cutting-edge technology.
             </p>
           </div>
@@ -168,8 +168,7 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Let&apos;s work together to bring your vision to life. Our team is ready to help you build something
-            amazing.
+            Let's work together to bring your vision to life. Our team is ready to help you build something amazing.
           </p>
           <Link
             href="/#contact"
