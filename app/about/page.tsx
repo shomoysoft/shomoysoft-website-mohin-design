@@ -39,7 +39,7 @@ export default function AboutPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" className="rounded-full" asChild>
-                    <Link href="#contact">Get in Touch</Link>
+                    <Link href="/contact">Get in Touch</Link>
                   </Button>
                   <Button size="lg" variant="outline" className="rounded-full bg-transparent" asChild>
                     <Link href="/services">Our Services</Link>
@@ -289,7 +289,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" variant="secondary" className="rounded-full" asChild>
-                <Link href="#contact">Contact Us Today</Link>
+                <Link href="/contact">Contact Us Today</Link>
               </Button>
               <Button
                 size="lg"

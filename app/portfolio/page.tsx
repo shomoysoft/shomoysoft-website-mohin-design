@@ -171,7 +171,7 @@ export default function PortfolioPage() {
             Let's work together to bring your vision to life. Our team is ready to help you build something amazing.
           </p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="inline-block bg-white text-primary px-8 py-4 rounded-[50px] font-semibold hover:bg-gray-100 transition-colors"
           >
             Get In Touch
