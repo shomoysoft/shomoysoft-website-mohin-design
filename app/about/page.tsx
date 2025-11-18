@@ -27,13 +27,6 @@ export default function AboutPage() {
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-primary/10 via-background to-primary/5 pt-32 pb-20 px-4">
           <div className="container mx-auto max-w-7xl">
-            <Button variant="ghost" className="mb-8 -ml-4" asChild>
-              <Link href="/">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Home
-              </Link>
-            </Button>
-
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-primary font-semibold mb-4">About ShomoySoft</p>

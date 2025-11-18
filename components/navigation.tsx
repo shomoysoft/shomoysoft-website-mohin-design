@@ -74,7 +74,7 @@ export function Navigation() {
           </div>
 
           <Button variant="outline" className="text-sm font-medium bg-transparent" asChild>
-            <Link href="#contact">Contact us</Link>
+            <Link href="/contact">Contact us</Link>
           </Button>
         </div>
       </div>

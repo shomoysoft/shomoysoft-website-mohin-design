@@ -13,7 +13,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`min-h-screen relative font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={`min-h-screen relative font-sans pt-16 lg:pt-20 ${GeistSans.variable} ${GeistMono.variable}`}>
         <PageLoaderProvider>
           <PageLoader />
           <PageTransitionWrapper>{children}</PageTransitionWrapper>
