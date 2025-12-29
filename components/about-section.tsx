@@ -35,7 +35,7 @@ export function AboutSection() {
               <div className="absolute top-8 -right-12 text-primary text-2xl">✦</div>
 
               {/* 99% Badge */}
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-lg p-4 flex items-center gap-3 border border-border">
+              {/* <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-lg p-4 flex items-center gap-3 border border-border">
                 <div className="bg-primary/10 p-3 rounded-xl">
                   <ThumbsUp className="w-6 h-6 text-primary" />
                 </div>
@@ -47,7 +47,7 @@ export function AboutSection() {
                     Satisfaction
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

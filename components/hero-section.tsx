@@ -52,10 +52,10 @@ export function HeroSection({ visibleCount = 3 }) {
               />
 
               {/* Experience badge */}
-              <div className="absolute top-6 right-6 bg-background rounded-xl shadow-lg p-4 text-center min-w-[120px]">
+              {/* <div className="absolute top-6 right-6 bg-background rounded-xl shadow-lg p-4 text-center min-w-[120px]">
                 <div className="text-3xl font-bold text-primary">10+</div>
                 <div className="text-xs text-muted-foreground mt-1">Years Experience</div>
-              </div>
+              </div> */}
 
               {/* Our Experts avatars */}
               <div className="absolute bottom-6 left-6 bg-background rounded-xl shadow-lg p-4">

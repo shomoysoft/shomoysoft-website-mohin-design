@@ -25,7 +25,7 @@ export const softwareServices = [
       "Security Implementation",
       "Performance Optimization",
     ],
-    price: "Starting from $8,000",
+    // price: "Starting from $8,000",
   },
   {
     icon: Globe,
@@ -39,7 +39,7 @@ export const softwareServices = [
       "Backend Integration",
       "Performance Testing",
     ],
-    price: "Starting from $5,000",
+    // price: "Starting from $5,000",
   },
   {
     icon: Cloud,
@@ -47,7 +47,7 @@ export const softwareServices = [
     description:
       "Leverage cloud computing for scalability, security, and cost-efficiency. We offer cloud migration, SaaS development, and DevOps services to optimize deployment, monitoring, and CI/CD pipelines.",
     features: ["Cloud Migration", "SaaS Development", "CI/CD Pipelines", "Monitoring Setup", "Cost Optimization"],
-    price: "Starting from $6,000",
+    // price: "Starting from $6,000",
   },
   {
     icon: Database,
@@ -55,7 +55,7 @@ export const softwareServices = [
     description:
       "Streamline business operations with ERP, CRM, and inventory management systems. Our custom enterprise software enhances productivity, data management, and decision-making.",
     features: ["ERP Systems", "CRM Solutions", "Inventory Management", "Data Analytics", "Process Automation"],
-    price: "Starting from $12,000",
+    // price: "Starting from $12,000",
   },
   {
     icon: Shield,
@@ -63,7 +63,7 @@ export const softwareServices = [
     description:
       "Connect disparate systems with powerful APIs and seamless third-party integrations. We ensure smooth data flow between platforms for improved efficiency.",
     features: ["RESTful APIs", "GraphQL", "Third-party Integration", "Data Synchronization", "Security Implementation"],
-    price: "Starting from $3,000",
+    // price: "Starting from $3,000",
   },
   {
     icon: Users,
@@ -71,7 +71,7 @@ export const softwareServices = [
     description:
       "Enhance user engagement with intuitive and visually appealing interfaces. Our design team crafts wireframes, prototypes, and interactive designs for optimal user experience.",
     features: ["Wireframing", "Prototyping", "User Research", "Design Systems", "Usability Testing"],
-    price: "Starting from $2,500",
+    // price: "Starting from $2,500",
   },
   {
     icon: Cog,
@@ -79,7 +79,7 @@ export const softwareServices = [
     description:
       "Ensure long-term reliability with continuous software updates, bug fixes, and technical support. We provide ongoing maintenance to keep your systems running smoothly.",
     features: ["24/7 Support", "Bug Fixes", "Security Updates", "Performance Monitoring", "Feature Updates"],
-    price: "Starting from $1,500/month",
+    // price: "Starting from $1,500/month",
   },
 ]
 
@@ -96,7 +96,7 @@ export const aiServices = [
       "Model Training",
       "Performance Optimization",
     ],
-    price: "Starting from $15,000",
+    // price: "Starting from $15,000",
   },
   {
     icon: Bot,
@@ -110,7 +110,7 @@ export const aiServices = [
       "Content Generation",
       "Text Analytics",
     ],
-    price: "Starting from $8,000",
+    // price: "Starting from $8,000",
   },
   {
     icon: ChartBar,
@@ -118,7 +118,7 @@ export const aiServices = [
     description:
       "Utilize image and video recognition technologies to automate quality control, surveillance, medical imaging, and more. Our computer vision applications help you extract valuable insights from visual data.",
     features: ["Image Recognition", "Video Analytics", "Quality Control", "Medical Imaging", "Object Detection"],
-    price: "Starting from $12,000",
+    // price: "Starting from $12,000",
   },
   {
     icon: Database,
@@ -132,7 +132,7 @@ export const aiServices = [
       "Data Visualization",
       "Real-time Analytics",
     ],
-    price: "Starting from $10,000",
+    // price: "Starting from $10,000",
   },
   {
     icon: Lightbulb,
@@ -146,6 +146,6 @@ export const aiServices = [
       "Team Training",
       "Scalability Planning",
     ],
-    price: "Starting from $5,000",
+    // price: "Starting from $5,000",
   },
 ]

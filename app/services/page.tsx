@@ -114,7 +114,7 @@ export default function ServicesPage() {
                 deliver comprehensive services that drive innovation and
                 accelerate your digital transformation.
               </p>
-              <div className="flex flex-wrap gap-8 text-sm">
+              {/* <div className="flex flex-wrap gap-8 text-sm">
                 <div>
                   <div className="text-3xl font-bold text-primary mb-1">
                     12+
@@ -133,7 +133,7 @@ export default function ServicesPage() {
                   </div>
                   <div className="text-gray-600">Client Satisfaction</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
